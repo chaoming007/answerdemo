@@ -1,0 +1,106 @@
+{
+	"status":200,
+	"data":[
+		{
+			"title":"（白日依山尽）的下一句是？",
+			"answer":[
+				{
+					"answerTit":"A.黄河入海流",
+					"right":1
+				},
+				{
+					"answerTit":"B.玉琼千里目",
+					"right":0
+				},
+				{
+					"answerTit":"C.更上一层楼",
+					"right":0
+				}
+
+			]
+
+		},
+		{
+			"title":"（大珠小珠落玉盘）出字白居易的哪首诗？",
+			"answer":[
+				{
+					"answerTit":"A.《长恨歌》",
+					"right":0
+				},
+				{
+					"answerTit":"B.《卖炭翁》",
+					"right":0
+				},
+				{
+					"answerTit":"C.《琵琶行》",
+					"right":1
+				}
+
+			]
+
+		},
+		{
+			"title":"中国足球进入世界杯决赛的是哪一届？",
+			"answer":[
+				{
+					"answerTit":"A.韩日世界杯",
+					"right":1
+				},
+				{
+					"answerTit":"B.德国世界杯",
+					"right":0
+				},
+				{
+					"answerTit":"C.南非世界杯",
+					"right":0
+				}
+
+			]
+
+		},
+		{
+			"title":"下列哪一个不是周星驰的电影？",
+			"answer":[
+				{
+					"answerTit":"A.《百变星君》",
+					"right":0
+				},
+				{
+					"answerTit":"B.《唐伯虎点秋香》",
+					"right":0
+				},
+				{
+					"answerTit":"C.《英雄本色》",
+					"right":1
+				}
+
+			]
+
+		},
+		{
+			"title":"（落霞与孤鹜齐飞）的下一句是什么？",
+			"answer":[
+				{
+					"answerTit":"A.烟花三月下扬州",
+					"right":0
+				},
+				{
+					"answerTit":"B.桃花潭水深千尺",
+					"right":0
+				},
+				{
+					"answerTit":"C.秋水共长天一色",
+					"right":1
+				}
+
+			]
+
+		}
+
+
+
+
+	]
+
+
+}
