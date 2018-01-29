@@ -1,16 +1,9 @@
-# React
+# react 答题小demo
 
-> A React.js project
+项目采用 react-router-dom 控制路由跳转，采用redux进行数据状态管理！
 
-## Build Setup
+## 运行方法
 
-# install dependencies
-npm install
+1.先通过 * npm install *   安装项目依赖包
 
-# serve with hot reload at localhost:8085
-npm run dev
-
-# build for production with minification
-npm run build
-
-
+2.依赖安装完之后运行   * npm run dev*
