@@ -1,4 +1,4 @@
-*{ padding: 0; margin: 0; box-sizing: border-box; color:#ffffff; font-size:16px; text-align:left }
+*{ padding: 0; margin: 0; box-sizing: border-box; color:#ffffff; font-size:16px; text-align:center }
 ul,li{ list-style:none}
 em{ font-style: normal;}
 a{ text-decoration: none; }
@@ -14,21 +14,25 @@ body{ height:100%; background:#6A5ACD	}
 .end-content .btn-box .p-1 em{ font-size:30px; font-weight:bold}
 .end-content .btn-sty{ height:50px; line-height:50px; background:#228B22; ; text-align:center; width:80%; display:block; margin:0 auto; border-radius: 25px;    box-shadow: 1px 1px 0px #000000; font-size:18px  }
 
-.time-box{ width:80px; height:80px; border-radius:50%; border:5px solid #ca93f2; background:#ffffff; line-height:72px; text-align:center; color:#89308d; font-size:30px; margin:30px auto 0}
-.score-box{   padding:0 10px; height:25px; line-height:25px; font-size:14px; color:#000000; text-align:center;border-radius: 13px; background:#ffffff ;opacity: 1; position: relative}
-.score-box .score-bg{ position: absolute; top: 0; left: 0; display: block; height:25px; line-height:25px;border-radius: 13px; background:#84db13;transition: all .2s ease-in }
+.time-box{ width:80px; height:80px; border-radius:50%; border:5px solid #ca93f2; background:#ffffff; line-height:72px; text-align:center; color:#89308d; font-size:30px; margin:25px auto 0}
+.score-box{ border:1px solid #ffffff;   margin:0 auto 20px;  padding:0 10px; height:8px; line-height:8px; font-size:14px; color:#000000; text-align:center;border-radius: 3px; background:#ffffff ;opacity: 1; position: relative}
+.score-box .score-bg{ position: absolute; top: 0; left: 0; display: block; height:6px; line-height:6px; background:#84db13;transition: all .2s ease-in ;border-radius: 3px;}
 .score-box em{ position: relative; z-index: 100; color: #47530e }
 
+.score-content{ display:inline-block; height:30px; line-height:30px; background:#ffffff; color:#000000; font-size:16px; text-align:center; border-radius:15px; margin:0 auto; padding:0 15px}
 
-.question-box{ padding:15px; height:100%;position: relative;}
-.question-box .tit-box{ line-height:30px; font-size:16px; padding:50px 10px 50px; margin:0 auto; font-size:20px; opacity:1;transform: translate(0,0);}
+
+
+
+.question-box{ padding:10px 15px 15px; height:100%;position: relative;}
+.question-box .tit-box{ line-height:30px; font-size:16px; padding:50px 10px 50px; margin:0 auto; font-size:20px; opacity:1;transform: translate(0,0); text-align:left}
 
 .question-box .animated{ transition: all .5s linear}
 .question-box .animated-short{ transition: all .2s linear}
 .question-box .tit-enter{ opacity:0;transform: translate(0,-10px);}
 
 .question-box .answer-list{  margin:0 auto }
-.question-box li{ height:50px; line-height:50px; padding: 0 70px 0 20px; background:#ffffff; color:#000000; border-radius: 25px; margin:0 auto 50px; position: relative; overflow:hidden;opacity:1;transform: translate(0,0);}
+.question-box li{ height:50px; line-height:50px; padding: 0 70px 0 20px; background:#ffffff; color:#000000; border-radius: 25px; margin:0 auto 50px; position: relative; overflow:hidden;opacity:1;transform: translate(0,0); text-align:left}
 .question-box li.right-current{ background:#228B22; color:#ffffff}
 .question-box li.wrong-current{ background:#FF4500; color:#ffffff}
 
