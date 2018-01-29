@@ -3,7 +3,7 @@ import $ from 'jquery'
 import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 import { withRouter } from 'react-router-dom'
-import {currentData,addScore} from '../store/reducer.js'
+import {currentData,addScore,addNowNum} from '../store/reducer.js'
 
 class Titlist extends React.Component{
     constructor(props) {
@@ -29,13 +29,13 @@ class Titlist extends React.Component{
         this.setState({
            timeNum:10
         })
-
         window.timer=setInterval(()=>{
             this.setState({
                 timeNum:this.state.timeNum-1
             },()=>{
                 if(this.state.timeNum<=0){
                     clearInterval(window.timer);
+                    this.props.addNowNum(1);   //已答题目数量增加
                     this.skipFun();
                 }
             })
@@ -71,6 +71,8 @@ class Titlist extends React.Component{
         })
         this.setClassFun(setNum,evt);
 
+        this.props.addNowNum(1);   //已答题目数量增加
+
         setTimeout(()=>{
             this.skipFun();                
         },1000) 
@@ -92,7 +94,7 @@ class Titlist extends React.Component{
     setClassFun(setNum,evt){         //设置错误和正确样式
 
         if(setNum==0){
-            evt.target.className="wrong-current"
+            evt.target.className="animated-short wrong-current"
         }
         if(setNum==1){
             this.props.addScore(10);
@@ -101,11 +103,9 @@ class Titlist extends React.Component{
         this.setState({
             currentNum:1
         })
-
     }
 
     initClassFun(){                  //题目跳转初始化样式
-
         let liObj=[...this.refs.ulObj.querySelectorAll("li")];
         liObj.forEach((item)=>{
              item.className="li-enter";      
@@ -130,32 +130,21 @@ class Titlist extends React.Component{
         $liObj.addClass('li-enter').removeClass('animated');              
     }
 
-   
-
 
     render(){
-
         let {answerCurrentNum,answerCurrent}=this.props;
-
         return(
         	<div>
                  <div className="time-box">{this.state.timeNum}</div>
-
         	   	 <div className="animated tit-box tit-enter" ref="titObj">{answerCurrentNum+1}.{answerCurrent.title}</div>
-
         	   	 <ul className="answer-list" ref="ulObj">
                       {
                         answerCurrent.answer.map((item,key)=>{
-                            return (<li 
-                                 
-                                 className={ this.state.currentNum==item.right?"right-current":"" }
-
+                            return (<li                                
+                                 className={ this.state.currentNum==item.right?"animated-short right-current":"" }
                                  onClick={(evt)=>{ this.setResultFun(answerCurrentNum,item.right,evt)}}
-
                                  key={key}>
-
                                     {item.answerTit}
-
                                 </li>)
                         })
                       }       	   	 	   
@@ -171,4 +160,4 @@ Titlist.propTypes={
     answerContent:PropTypes.array
 }
 
-export default connect((state)=>({state}),{currentData,addScore})(withRouter(Titlist)) 
+export default connect((state)=>({state}),{currentData,addScore,addNowNum})(withRouter(Titlist)) 

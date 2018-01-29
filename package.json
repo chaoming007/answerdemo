@@ -10,10 +10,12 @@
   "author": "匿名",
   "license": "ISC",
   "dependencies": {
+    "animate.css": "^3.5.2",
     "axios": "^0.17.1",
     "jquery": "^3.3.1",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
+    "react-addons-css-transition-group": "^15.6.2",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",

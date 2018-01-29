@@ -4,12 +4,14 @@ let defaultState={
 	score:0,
 	answerCurrentNum:0,
 	answerCurrent:{},
-	answerContent:[]
+	answerContent:[],
+	nowNum:1       //当前第几题
 };
 
 const GETDATE="GETDATE";  //获得题目数据
 const CURRENTDATE="CURRENTDATE"; //下一道题内容
 const ADDSCORE="ADDSCORE";       //分数增加
+const ADDNOWNUM="ADDNOWNUM";     //已达题目数量
 
 function reducerFun(state=defaultState,action){
 	switch(action.type){
@@ -23,6 +25,9 @@ function reducerFun(state=defaultState,action){
 			return Object.assign({},state);
 		case  ADDSCORE:
 			state.score=state.score+action.arg;
+			return Object.assign({},state);
+		case  ADDNOWNUM:
+			state.nowNum=state.nowNum+action.arg;
 			return Object.assign({},state);
 		default:
 		    return state;
@@ -53,6 +58,13 @@ export const currentData=(arg)=>{
 export const addScore=(arg)=>{
 	return{
 		type:ADDSCORE,
+		arg
+	}
+}
+
+export const addNowNum=(arg)=>{
+	return{
+		type:ADDNOWNUM,
 		arg
 	}
 }
